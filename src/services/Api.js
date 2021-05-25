@@ -9,4 +9,4 @@ const galeryApi = ({ query = '', page = 1 }) => {
         .then(({ data }) => data.hits);
 };
 
-export default galeryApi;
+export default { galeryApi };
