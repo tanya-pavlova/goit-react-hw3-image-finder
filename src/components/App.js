@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './App.module.css';
-import galeryApi from '../services/Api';
+import getGalleryItems from '../services/Api';
 import SearchForm from './Searchbar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
 import Button from './Button/Button';
@@ -54,7 +54,7 @@ class App extends Component {
 
     this.setState({ isLoading: true });
 
-    galeryApi(options)
+    getGalleryItems.galleryApi(options)
       .then(pictures => {
         this.setState(prevState => ({
           pictures: [...prevState.pictures, ...pictures],
